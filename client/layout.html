@@ -1,8 +1,19 @@
 <template name="layout">
+
+{{#contentFor "headerTitle"}}
+  <h1 class="title">PicStream</h1>
+{{/contentFor}}
+
 {{#ionBody}}
-  {{> ionNavBar class="bar-balanced"}}
+
+{{> ionNavBar class="bar-stable"}}
+
     {{#ionNavView}}
+
       {{> yield}}
+
+      {{> ionFooterBar}}
+
     {{/ionNavView}}
 {{/ionBody}}
 </template>

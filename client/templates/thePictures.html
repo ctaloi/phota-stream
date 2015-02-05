@@ -1,8 +1,8 @@
 <template name="thePictures">
-
+  <button data-ion-modal="myModal">Open Modal</button>
   {{#ionList class="my-class"}}
     {{#each showPictures}}
-      {{#ionItem buttonRight=true avatar=true}}
+      {{#ionItem}}
       <div class="card">
         <div class="item item-divider">
           {{createdAt}}
@@ -15,4 +15,32 @@
     {{/each}}
   {{/ionList}}
 
+  <div class="list">
+    {{#each showPictures}}
+    <a class="item item-thumbnail-left" href="#">
+      <img src="{{image}}">
+      <h2>{{createdAt}}</h2>
+    </a>
+    {{/each}}
+</div>
+
+{{#ionList class="my-class"}}
+{{#each showPictures}}
+  {{#ionItem href="https://google.com" iconRight=true}}
+    <img src="{{image}}" alt="">
+      <h2>{{createdAt}}</h2>
+      <p>(555) 555-1212</p>
+      <button class="button button-positive">
+        {{> ionIcon icon="ios-telephone"}}
+      </button>
+    {{/ionItem}}
+  {{/each}}
+{{/ionList}}
+
+</template>
+
+<template name="myModal">
+  {{#ionModal title="My Modal"}}
+    <p>My modal content goes here</p>
+  {{/ionModal}}
 </template>

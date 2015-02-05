@@ -6,9 +6,10 @@
 
 meteor-platform
 insecure
-mdg:camera
 mdg:geolocation
 meteoric:ionic
 iron:router
 meteoric:ionic-sass
 meteoric:ionicons-sass
+meteoric:autoform-ionic
+meteoric:camera
