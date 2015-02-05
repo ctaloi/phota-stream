@@ -1,0 +1,80 @@
+
+<template name="gooseyTv">
+{{#contentFor "headerTitle"}}
+  <h1 class="title">PhotoStreamer</h1>
+{{/contentFor}}
+
+    {{#ionView}}
+    {{#ionContent}}
+    {{>cameraEvent}}
+
+    {{#ionList class="my-class"}}
+      {{#each showPictures}}
+        {{#ionItem buttonRight=true avatar=true}}
+        <div class="card">
+          <div class="item item-divider">
+            {{createdAt}}
+          </div>
+          <div class="item item-text-wrap">
+          <img src="{{image}}" alt="">
+          </div>
+        </div>
+          {{/ionItem}}
+      {{/each}}
+    {{/ionList}}
+
+
+    <div class="item tabs tabs-secondary tabs-icon-left">
+            <a class="tab-item" href="#" data-action="fake">
+              <i class="icon ion-email"></i>
+              Send Email
+            </a>
+            <a class="tab-item" href="#" data-action="fake">
+              <i class="icon ion-iphone"></i>
+              Call
+            </a>
+            <a class="tab-item" href="#" data-action="fake">
+              <i class="icon ion-share"></i>
+              Share
+            </a>
+          </div>
+    {{/ionContent}}
+  {{/ionView}}
+
+
+</template>
+
+
+
+<template name="cameraEvent">
+  <div>
+    <button class="button button-positive button-full"><i class="icon ion-camera"></i></button>
+  </div>
+</template>
+
+<template name="libraryEvent">
+  <div>
+    <p>Library</p>
+    <button>Click Me</button>
+  </div>
+</template>
+
+<template name="img">
+  <div>
+    {{#if img}}
+      <img src="{{img}}" alt="">
+    {{else}}
+      <p>No image yet.</p>
+    {{/if}}
+  </div>
+</template>
+
+
+<template name="myPictures">
+  Here's the pictures
+  <div>
+    {{#each showPictures}}
+      <img src="{{image}}" alt="">
+    {{/each}}
+  </div>
+</template>
