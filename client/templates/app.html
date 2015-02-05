@@ -1,0 +1,32 @@
+
+<template name="app">
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">PhotaStream</h1>
+  {{/contentFor}}
+
+    {{#ionView}}
+    {{#ionContent}}
+    {{>cameraEvent}}
+
+    {{> thePictures}}
+
+
+
+    <div class="item tabs tabs-secondary tabs-icon-left">
+            <a class="tab-item" href="#" data-action="fake">
+              <i class="icon ion-email"></i>
+              Send Email
+            </a>
+            <a class="tab-item" href="#" data-action="fake">
+              <i class="icon ion-iphone"></i>
+              Call
+            </a>
+            <a class="tab-item" href="#" data-action="fake">
+              <i class="icon ion-share"></i>
+              Share
+            </a>
+          </div>
+    {{/ionContent}}
+  {{/ionView}}
+</template>

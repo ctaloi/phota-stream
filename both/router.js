@@ -4,5 +4,5 @@ Router.configure({
 
 Router.route('/', function () {
   this.layout('layout');
-  this.render('gooseyTv');
+  this.render('app');
 });

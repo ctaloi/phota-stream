@@ -1,0 +1,18 @@
+<template name="thePictures">
+
+  {{#ionList class="my-class"}}
+    {{#each showPictures}}
+      {{#ionItem buttonRight=true avatar=true}}
+      <div class="card">
+        <div class="item item-divider">
+          {{createdAt}}
+        </div>
+        <div class="item item-text-wrap">
+        <img src="{{image}}" alt="">
+        </div>
+      </div>
+        {{/ionItem}}
+    {{/each}}
+  {{/ionList}}
+
+</template>
