@@ -12,7 +12,7 @@ Template.image.rendered = function(){
     maxRowHeight: 0,
     lastRow: 'nojustify',
     fixedHeight: false,
-    captions: true,
+    captions: false,
     margins: 1,
     randomize: false,
     extension: /.[^.]+$/,
@@ -20,7 +20,7 @@ Template.image.rendered = function(){
     waitThumbnailsLoad: true,
     justifyThreshold: 0.35,
     cssAnimation: false,
-    imagesAnimationDuration: 300
+    imagesAnimationDuration: 100
   }).on('jg.complete', function (e) {
     // this callback runs after the gallery layout is created
   }).on('jg.resize', function (e) {

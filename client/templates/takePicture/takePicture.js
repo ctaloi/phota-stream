@@ -1,6 +1,6 @@
 Session.setDefault('img', null);
 
-var takePicture = function(opts) {
+var getPicture = function(opts) {
   MeteoricCamera.getPicture(opts, function(err, data) {
     if (err) {
       console.log('error', err);
@@ -16,8 +16,7 @@ var takePicture = function(opts) {
   });
 };
 
-
-Template.cameraEvent.events({
+Template.takePicture.events({
   'click button': function () {
     getPicture({quality: 75});
   }
