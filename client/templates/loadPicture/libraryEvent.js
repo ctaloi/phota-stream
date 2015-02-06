@@ -1,5 +1,5 @@
 Template.libraryEvent.events({
-  'click button': function () {
+  'click button': function() {
     if (Meteor.isCordova) {
       getPicture({
         width: 350,

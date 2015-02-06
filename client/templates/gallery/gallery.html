@@ -1,13 +1,13 @@
 <template name="gallery">
 
   <div id="gallery">
-    {{#each showPictures}}
-      {{>image}}
-    {{/each}}
+    {{#each showPictures}} {{>image}} {{/each}}
 
   </div>
 </template>
 
 <template name="image">
-    <a><img src="{{image}}" /></a>
+  <a>
+    <img src="{{image}}" />
+  </a>
 </template>
