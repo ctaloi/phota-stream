@@ -7,9 +7,11 @@
 meteor-platform
 insecure
 mdg:geolocation
-meteoric:ionic
 iron:router
-meteoric:ionic-sass
-meteoric:ionicons-sass
+jquery
+micah:justified-gallery
 meteoric:autoform-ionic
 meteoric:camera
+meteoric:ionic
+meteoric:ionic-sass
+meteoric:ionicons-sass

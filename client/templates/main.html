@@ -1,0 +1,19 @@
+<template name="main">
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">PicStream</h1>
+  {{/contentFor}}
+
+  {{#contentFor "headerButtonLeft"}}
+    {{> takePicture}}
+  {{/contentFor}}
+
+    {{#ionView}}
+      {{#ionContent}}
+
+
+
+        {{> gallery}}
+    {{/ionContent}}
+  {{/ionView}}
+</template>

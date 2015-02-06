@@ -17,7 +17,7 @@ var getPicture = function(opts) {
 };
 
 
-Template.cameraEvent.events({
+Template.takePicture.events({
   'click button': function () {
     getPicture({quality: 75});
   }

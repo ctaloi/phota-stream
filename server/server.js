@@ -1,3 +1,3 @@
 Meteor.publish("Pictures", function () {
-  return Pictures.find();
+  return Pictures.find({})
 });
