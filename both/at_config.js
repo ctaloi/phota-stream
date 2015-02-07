@@ -1,24 +1,44 @@
+
+var submitCloseModal = function(error, state){
+  if (!error) {
+    if (state === "signIn") {
+      IonModal.close();
+      Router.go('/');
+    }
+    if (state === "signUp") {
+      IonModal.close();
+      Router.go('/');
+    }
+  }
+};
+
+AccountsTemplates.addField({
+    _id: 'name',
+    type: 'text',
+    displayName: "Your Name"
+});
+
 AccountsTemplates.configure({
   // Behaviour
-  // confirmPassword: true,
-  enablePasswordChange: true,
+  confirmPassword: false,
+  enablePasswordChange: false,
   forbidClientAccountCreation: false,
   overrideLoginErrors: true,
   sendVerificationEmail: false,
 
   // Appearance
   showAddRemoveServices: false,
-  // showForgotPasswordLink: false,
-  showLabels: true,
+  showForgotPasswordLink: false,
+  showLabels: false,
   showPlaceholders: true,
 
   // Client-side Validation
   continuousValidation: false,
   negativeFeedback: false,
-  negativeValidation: true,
-  positiveValidation: true,
-  positiveFeedback: true,
-  showValidating: true,
+  negativeValidation: false,
+  positiveValidation: false,
+  positiveFeedback: false,
+  showValidating: false,
 
   // Privacy Policy and Terms of Use
   // privacyUrl: 'privacy',
@@ -26,11 +46,11 @@ AccountsTemplates.configure({
 
   // Redirects
   homeRoutePath: '/',
-  redirectTimeout: 4000,
+  redirectTimeout: 2000,
 
   // Hooks
-  // onLogoutHook: myLogoutFunc,
-  // onSubmitHook: mySubmitFunc,
+  onLogoutHook: submitCloseModal,
+  onSubmitHook: submitCloseModal,
 
   // Texts
   texts: {

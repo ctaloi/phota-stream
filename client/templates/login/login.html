@@ -1,0 +1,22 @@
+<template name="loginButton">
+  <button class="button button-clear button-stable" data-ion-modal="loginModal">
+    <i class="icon ion-log-in"></i>Login</button>
+</template>
+
+<template name="loginModal">
+  {{#ionModal title="Login"}}
+    {{> atForm}}
+  {{/ionModal}}
+</template>
+
+<template name="logoutButton">
+  <button class="button button-clear button-stable" data-ion-modal="logoutModal">
+    <i class="icon ion-log-out"></i>Logout</button>
+</template>
+
+<template name="logoutModal">
+  {{#ionModal title="Logout"}}
+    <button class="button button-clear button-stable" data-action="sign-out">
+    <i class="icon ion-gear-a"></i>Action Logout</button>
+  {{/ionModal}}
+</template>
