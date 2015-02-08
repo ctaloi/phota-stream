@@ -18,19 +18,27 @@ AccountsTemplates.addField({
     displayName: "Your Name"
 });
 
+AccountsTemplates.configureRoute('changePwd');
+AccountsTemplates.configureRoute('enrollAccount');
+AccountsTemplates.configureRoute('forgotPwd');
+AccountsTemplates.configureRoute('resetPwd');
+AccountsTemplates.configureRoute('signIn');
+AccountsTemplates.configureRoute('signUp');
+AccountsTemplates.configureRoute('verifyEmail');
+
 AccountsTemplates.configure({
   // Behaviour
   confirmPassword: false,
-  enablePasswordChange: false,
+  enablePasswordChange: true,
   forbidClientAccountCreation: false,
   overrideLoginErrors: true,
   sendVerificationEmail: false,
 
   // Appearance
-  showAddRemoveServices: false,
-  showForgotPasswordLink: false,
-  showLabels: false,
-  showPlaceholders: true,
+  showAddRemoveServices: true,
+  showForgotPasswordLink: true,
+  showLabels: true,
+  showPlaceholders: false,
 
   // Client-side Validation
   continuousValidation: false,
@@ -49,7 +57,7 @@ AccountsTemplates.configure({
   redirectTimeout: 2000,
 
   // Hooks
-  onLogoutHook: submitCloseModal,
+  // onLogoutHook: submitCloseModal,
   onSubmitHook: submitCloseModal,
 
   // Texts

@@ -8,13 +8,13 @@ App.info({
     version: '0.0.1'
 });
 
-// App.icons({
-//     'iphone': 'public/icons/Icon-60.png',
-//     'iphone_2x': 'public/icons/Icon-60@2x.png',
-//     'iphone_3x': 'public/icons/Icon-60@3x.png',
-//     'ipad': 'public/icons/Icon-76.png',
-//     'ipad_2x': 'public/icons/Icon-76@2x.png'
-// });
+App.icons({
+    'iphone': 'resources/icons/Icon-60.png',
+    'iphone_2x': 'resources/icons/Icon-60@2x.png',
+    'iphone_3x': 'resources/icons/Icon-60@3x.png',
+    'ipad': 'resources/icons/Icon-76.png',
+    'ipad_2x': 'resources/icons/Icon-76@2x.png'
+});
 //
 // App.launchScreens({
 //     'iphone': 'public/splash/iphone.png',

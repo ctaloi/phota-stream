@@ -1,16 +1,14 @@
-Session.setDefault('img', null);
-
 var getPicture = function(opts) {
   MeteoricCamera.getPicture(opts, function(err, data) {
     if (err) {
       console.log('error', err);
     }
     if (data) {
-      Session.set('img', data)
-      console.log('img', data)
+      console.log(Meteor.userId(), "Saved an image")
       Pictures.insert({
         image: data,
         createdAt: new Date(),
+        userId: Meteor.userId(),
       });
     }
   });
@@ -19,7 +17,7 @@ var getPicture = function(opts) {
 Template.cameraButton.events({
   'click button': function() {
     getPicture({
-      quality: 75
+      quality: 95
     });
   }
 });

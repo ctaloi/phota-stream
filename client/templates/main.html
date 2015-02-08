@@ -1,43 +1,24 @@
 <template name="main">
 
   {{#contentFor "headerTitle"}}
-    <h1 class="title">Photo Stream</h1>
+    <h1 class="title">{{name}}'s Stream</h1>
   {{/contentFor}}
 
-  {{#if currentUser}}
-    {{#contentFor "headerTitle"}}
-      <h1 class="title">{{name}}'s Stream</h1>
-    {{/contentFor}}
+  {{#contentFor "headerButtonRight"}}
+    {{> atNavButton}}
+  {{/contentFor}}
 
-    {{#contentFor "headerButtonRight"}}
-      {{> logoutButton}}
-    {{/contentFor}}
+  {{#contentFor "headerButtonLeft"}}
+    {{> cameraButton}}
+  {{/contentFor}}
 
-    {{#contentFor "headerButtonLeft"}}
-      {{> cameraButton}}
-    {{/contentFor}}
+  {{#ionView}}
+  {{#ionContent}}
 
-    {{#ionView}}
-    {{#ionContent}}
+      {{> gallery}}
+      {{> profile}}
 
-        {{> gallery}}
-        {{> profile}}
-
-    {{/ionContent}}
-    {{/ionView}}
-
-  {{ else }}
-    {{#contentFor "headerButtonRight"}}
-      {{> loginButton}}
-    {{/contentFor}}
-
-    {{#ionView}}
-    {{#ionContent}}
-      {{> atForm}}
-    {{/ionContent}}
-    {{/ionView}}
-
-  {{/if}}
-
+  {{/ionContent}}
+  {{/ionView}}
 
 </template>

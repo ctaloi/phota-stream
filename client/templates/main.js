@@ -1,12 +1,14 @@
 Template.main.helpers({
   email: function () {
-    return Meteor.user().emails[0].address;
+    if (Meteor.user())
+      return Meteor.user().emails[0].address;
   }
 });
 
 
 Template.main.helpers({
   name: function () {
-    return Meteor.user().profile.name;
+    if (Meteor.user())
+      return Meteor.user().profile.name;
   }
 });
