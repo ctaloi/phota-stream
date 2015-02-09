@@ -12,3 +12,10 @@ Template.main.helpers({
       return Meteor.user().profile.name;
   }
 });
+
+
+// Template.main.rendered = function () {
+//   if (!Meteor.loggingIn() && !Meteor.user()) {
+//     IonModal.open('signIn');
+//   }
+// };

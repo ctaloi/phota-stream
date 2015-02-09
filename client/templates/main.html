@@ -1,22 +1,51 @@
 
 <template name="main">
 
-  {{#contentFor "headerButtonLeft"}}
-    {{> cameraButton}}
-  {{/contentFor}}
+  {{#if currentUser}}
 
-  {{#contentFor "headerButtonRight"}}
-    {{> atNavButton}}
-  {{/contentFor}}
+    {{#contentFor "headerButtonLeft"}}
+      {{> cameraButton}}
+    {{/contentFor}}
 
-  {{#contentFor "headerTitle"}}
-    <h1 class="title">{{name}}'s Stream</h1>
-  {{/contentFor}}
+    {{#contentFor "headerButtonRight"}}
+      {{> atNavButton}}
+    {{/contentFor}}
 
-  {{#ionView}}
+    {{#contentFor "headerTitle"}}
+      <h1 class="title">{{name}}'s Stream</h1>
+    {{/contentFor}}
 
-      {{> gallery}}
+    {{#ionView}}
+        {{> gallery}}
+    {{/ionView}}
 
-  {{/ionView}}
+  {{else}}
+
+    {{#contentFor "headerTitle"}}
+    <h1 class="title">PictureStream</h1>
+    {{/contentFor}}
+
+    {{#contentFor "headerButtonLeft"}}
+
+    {{/contentFor}}
+
+    {{#contentFor "headerButtonRight"}}
+
+    {{/contentFor}}
+
+    {{#ionView}}
+    {{#ionContent}}
+
+      <h2>Not Logged In ?</h2>
+
+      <div class="padding">
+        <button class="button button-positive button-block" data-ion-modal="signIn">Login or SignUp</button>
+      </div>
+
+
+    {{/ionContent}}
+    {{/ionView}}
+
+  {{/if}}
 
 </template>

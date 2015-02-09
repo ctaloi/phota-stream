@@ -17,7 +17,9 @@ var getPicture = function(opts) {
 Template.cameraButton.events({
   'click button': function() {
     getPicture({
-      quality: 95
+      quality: 95,
+      width: 800,
+      height: 800
     });
   }
 });

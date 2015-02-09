@@ -5,20 +5,16 @@
 # but you can also edit it by hand.
 
 meteor-platform
-insecure
 mdg:geolocation
 iron:router
 jquery
-micah:justified-gallery
 meteoric:autoform-ionic
 meteoric:camera
 meteoric:ionic
 meteoric:ionic-sass
 meteoric:ionicons-sass
-sacha:spin
 useraccounts:ionic
 accounts-password
 email
 fastclick
-msavin:mongoinspector
 underscore
