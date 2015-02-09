@@ -12,3 +12,7 @@ Router.route('/', function () {
     return Meteor.subscribe('Pictures');
   }
 });
+
+Router.route('img', function () {
+  this.render('img');
+});

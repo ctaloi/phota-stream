@@ -1,24 +1,22 @@
+
 <template name="main">
 
-  {{#contentFor "headerTitle"}}
-    <h1 class="title">{{name}}'s Stream</h1>
+  {{#contentFor "headerButtonLeft"}}
+    {{> cameraButton}}
   {{/contentFor}}
 
   {{#contentFor "headerButtonRight"}}
     {{> atNavButton}}
   {{/contentFor}}
 
-  {{#contentFor "headerButtonLeft"}}
-    {{> cameraButton}}
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">{{name}}'s Stream</h1>
   {{/contentFor}}
 
   {{#ionView}}
-  {{#ionContent}}
 
       {{> gallery}}
-      {{> profile}}
 
-  {{/ionContent}}
   {{/ionView}}
 
 </template>

@@ -1,13 +1,26 @@
-<template name="gallery">
 
+<template name="gallery">
   <div id="gallery">
-    {{#each showPictures}} {{>image}} {{/each}}
+
+  {{#ionContent}}
+    {{#ionList class="my-class"}}
+      {{#each showPictures}}
+        {{>image}}
+      {{/each}}
+    {{/ionList}}
+  {{/ionContent}}
 
   </div>
 </template>
 
 <template name="image">
-  <a>
-    <img src="{{image}}" />
-  </a>
+
+  {{#ionItem buttonRight=true}}
+  {{!-- {{#ionItem buttonRight=true}} --}}
+  <a href="{{img}}" target="_blank" class="img positive">{{img}}</a>
+  <button class="button button-positive">
+        {{> ionIcon icon="ios-telephone"}}
+      </button>
+  {{!-- <a><img class="img" src="{{image}}" /></a> --}}
+  {{/ionItem}}
 </template>

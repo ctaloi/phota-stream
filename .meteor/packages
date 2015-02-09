@@ -19,3 +19,6 @@ sacha:spin
 useraccounts:ionic
 accounts-password
 email
+fastclick
+msavin:mongoinspector
+underscore
