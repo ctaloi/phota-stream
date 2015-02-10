@@ -1,4 +1,6 @@
+
 <template name="gallery">
+
   <div id="gallery">
   {{#ionContent}}
 
@@ -8,16 +10,18 @@
     {{/each}}
   </div>
 
-    {{#ionList}}
-      {{#each showPictures}}
-        {{#ionItem path="image.show" buttonRight=true avatar=true class="item-icon-right"}}
-        <img src="{{image}}">
-        {{createdAt}}
-        {{> ionIcon icon="ios-arrow-forward" class="positive"}}
-        {{/ionItem}}
-      {{/each}}
-    {{/ionList}}
+  {{#ionList}}
+    {{#each showPictures}}
+      {{#ionItem path="image.show" buttonRight=true avatar=true class="item-icon-right"}}
+      <img src="{{image}}">
+      {{createdAt}}
+      {{> ionIcon icon="ios-arrow-forward" class="positive"}}
+      {{/ionItem}}
+    {{/each}}
+  {{/ionList}}
+
   {{/ionContent}}
 
   </div>
+
 </template>
