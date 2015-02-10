@@ -1,27 +1,21 @@
 
 <template name="gallery">
+{{#ionContent}}
 
-  <div id="gallery">
-  {{#ionContent}}
-
-  <div class="row">
-    {{#each showRecent 3}}
-      <div class="col"><img src="{{image}}"></div>
-    {{/each}}
-  </div>
-
-  {{#ionList}}
-    {{#each showPictures}}
-      {{#ionItem path="image.show" buttonRight=true avatar=true class="item-icon-right"}}
-      <img src="{{image}}">
-      {{createdAt}}
-      {{> ionIcon icon="ios-arrow-forward" class="positive"}}
+  {{#ionList class="list"}}
+    {{#each getPictures}}
+      {{#ionItem path="image.show" buttonRight=false avatar=false}}
+      <div class="item-image">
+        <img src="{{image}}">
+      </div>
+      <!-- {{createdAt}} -->
+      <!-- {{> ionIcon icon="ios-arrow-forward" class="positive"}} -->
       {{/ionItem}}
     {{/each}}
   {{/ionList}}
 
   {{/ionContent}}
 
-  </div>
+
 
 </template>

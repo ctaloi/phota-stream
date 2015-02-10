@@ -1,5 +1,8 @@
 <template name="images">
 
+  {{#ionView}}
+  {{#ionContent}}
+
   {{#contentFor "headerButtonLeft"}}
     {{>ionNavBackButton path="gallery" text=""}}
   {{/contentFor}}
@@ -8,9 +11,16 @@
    <h1 class="title">Details</h1>
   {{/contentFor}}
 
-  {{#ionView}}
-  {{#ionContent class="padding"}}
-    <img src="{{image}}">
-  {{/ionContent}}
+  <div class="item-image">
+      <img src="{{image}}">
+  </div>
+
+  <div class="card">
+  <div class="item item-text-wrap">
+    {{formatTime createdAt}}
+  </div>
+  </div>
+
+    {{/ionContent}}
   {{/ionView}}
 </template>
