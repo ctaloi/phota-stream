@@ -3,7 +3,8 @@ Template.gallery.helpers({
     return Pictures.find({}, {
       sort: {
         createdAt: -1
-      }
+      },
+      skip: 0
     });
   },
   getRecentPictures: function(count) {
@@ -16,6 +17,9 @@ Template.gallery.helpers({
   },
   getPictureCount: function() {
     return Pictures.find().count();
+  },
+  getLastPicture: function() {
+    return Session.get("img");
   }
 });
 

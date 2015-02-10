@@ -19,7 +19,13 @@
   <div class="item item-text-wrap">
     {{formatTime createdAt}}
   </div>
+
+  <button class="button button-clear pull-right button-positive" data-action="share-image" data-product-id="{{image._id}}">
+    {{> ionIcon icon='ios-upload-outline'}}
+  </button>
+
   </div>
+
 
     {{/ionContent}}
   {{/ionView}}

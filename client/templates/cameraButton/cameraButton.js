@@ -5,6 +5,7 @@ var getPicture = function(opts) {
     }
     if (data) {
       console.log(Meteor.userId(), "Saved an image")
+      Session.set("img", data);
       Pictures.insert({
         image: data,
         createdAt: new Date(),
