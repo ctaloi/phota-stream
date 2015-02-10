@@ -5,7 +5,13 @@ Template.gallery.helpers({
         createdAt: -1
       }
     });
-  }
+  },
+  showRecent: function(count) {
+    return Pictures.find({}, {
+      sort: { createdAt: -1 },
+      limit: count
+    });
+  },
 });
 
 // Template.image.rendered = function() {

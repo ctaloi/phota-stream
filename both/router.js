@@ -9,6 +9,7 @@ Router.configure({
 Router.route('/', function() {
   this.layout('layout');
   this.render('main');
+  fastRender: true;
 }, {
   waitOn: function() {
     return Meteor.subscribe('Pictures');
