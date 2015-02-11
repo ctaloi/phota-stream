@@ -52,7 +52,7 @@ meteor-platform@1.2.1
 meteorhacks:fast-render@2.3.1
 meteorhacks:inject-data@1.2.2
 meteorhacks:picker@1.0.1
-meteoric:autoform-ionic@0.1.4
+meteoric:autoform-ionic@0.1.5
 meteoric:ionic@0.1.13
 meteoric:ionic-sass@0.1.8
 meteoric:ionicons-sass@0.1.5
