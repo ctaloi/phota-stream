@@ -2,6 +2,10 @@ Router.configure({
   layoutTemplate: 'layout'
 });
 
+Router.route('/sideMenu', function() {
+  this.render('sideMenu');
+});
+
 Router.route('/', function() {
   this.layout('layout');
   this.render('main');

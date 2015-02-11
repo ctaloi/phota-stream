@@ -4,11 +4,17 @@
   {{#if currentUser}}
 
     {{#contentFor "headerButtonLeft"}}
-      {{!-- {{> cameraButton}} --}}
+      <button class="button button-clear pull-left" data-ion-menu-toggle="left">
+        {{#if isAndroid}}
+          {{> ionIcon icon='android-more-vertical'}}
+        {{else}}
+          {{> ionIcon icon='navicon'}}
+        {{/if}}
+      </button>
     {{/contentFor}}
 
     {{#contentFor "headerButtonRight"}}
-      {{> atNavButton}}
+          
     {{/contentFor}}
 
     {{#contentFor "headerTitle"}}
@@ -20,7 +26,7 @@
     {{/ionView}}
 
     <div class="bar bar-footer bar-dark">
-    <div class="title">{{> cameraButton}}</div>
+      <div class="title">{{> cameraButton}}</div>
     </div>
 
 
