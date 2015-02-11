@@ -1,5 +1,5 @@
 var getPicture = function(opts) {
-  MeteoricCamera.getPicture(opts, function(err, data) {
+  MeteorCamera.getPicture(opts, function(err, data) {
     if (err) {
       console.log('error', err);
     }
@@ -20,7 +20,7 @@ Template.cameraButton.events({
     getPicture({
       quality: 95,
       width: 800,
-      height: 800
+      height: 800      
     });
   }
 });

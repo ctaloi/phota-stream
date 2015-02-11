@@ -1,7 +1,7 @@
 Template.libraryEvent.events({
   'click button': function() {
     if (Meteor.isCordova) {
-      MeteoricCamera.getPicture({
+      MeteorCamera.getPicture({
         width: 350,
         height: 350,
         quality: 75,

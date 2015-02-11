@@ -4,7 +4,7 @@
   {{#if currentUser}}
 
     {{#contentFor "headerButtonLeft"}}
-      {{> cameraButton}}
+      {{!-- {{> cameraButton}} --}}
     {{/contentFor}}
 
     {{#contentFor "headerButtonRight"}}
@@ -18,6 +18,11 @@
     {{#ionView}}
         {{> gallery}}
     {{/ionView}}
+
+    <div class="bar bar-footer bar-dark">
+    <div class="title">{{> cameraButton}}</div>
+    </div>
+
 
   {{else}}
 
@@ -42,8 +47,10 @@
       </div>
     </div>
 
+    <div class="card">
     <div class="padding">
         <button class="button button-positive button-block" data-ion-modal="signIn">Login or SignUp</button>
+    </div>
     </div>
 
 

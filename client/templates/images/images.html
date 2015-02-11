@@ -30,3 +30,19 @@
     {{/ionContent}}
   {{/ionView}}
 </template>
+
+<template name="imageModal">
+
+  {{#ionModal title="My Modal"}}
+  <div class="item-image">
+      <img src="{{image}}">
+  </div>
+
+  <div class="card">
+  <div class="item item-text-wrap">
+    {{formatTime createdAt}}
+  </div>
+  </div>
+  {{/ionModal}}
+
+</template>

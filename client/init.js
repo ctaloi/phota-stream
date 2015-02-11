@@ -1,7 +1,7 @@
-Meteor.startup(function () {
-  if (Meteor.isCordova) {
-    StatusBar.hide();}
-});
+// Meteor.startup(function () {
+//   if (Meteor.isCordova) {
+//     StatusBar.hide();}
+// });
 
 Meteor.startup(function () {
   Session.set('userId', Meteor.userId());
