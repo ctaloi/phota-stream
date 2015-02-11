@@ -4,7 +4,8 @@ var getPicture = function(opts) {
       console.log('error', err);
     }
     if (data) {
-      console.log(Meteor.userId(), "Saved an image")
+      console.log(Meteor.userId(), "Saved an image");
+      console.log(opts);
       Session.set("img", data);
       Pictures.insert({
         image: data,
@@ -18,9 +19,9 @@ var getPicture = function(opts) {
 Template.cameraButton.events({
   'click button': function() {
     getPicture({
-      quality: 95,
+      quality: 90,
       width: 800,
-      height: 800      
+      height: 800
     });
   }
 });
