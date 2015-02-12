@@ -20,8 +20,24 @@ Template.cameraButton.events({
   'click button': function() {
     getPicture({
       quality: 90,
-      width: 800,
-      height: 800
+      width: 1024,
+      height: 1024,
+      saveToPhotoAlbum: true
     });
+  }
+});
+
+Template.libraryButton.events({
+  'click button': function () {
+    if (Meteor.isCordova) {
+      getPicture({
+        quality: 90,
+        width: 1024,
+        height: 1024,
+        sourceType: Camera.PictureSourceType.PHOTOLIBRARY
+      });
+    } else {
+      alert('Cordova only feature.');
+    }
   }
 });
