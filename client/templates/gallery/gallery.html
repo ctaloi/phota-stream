@@ -2,10 +2,12 @@
 
 {{#ionContent}}
   {{#each getPictures}}
-    {{#ionItem path="image.show" class="item-image" buttonRight=false avatar=false}}
-      <img class="img" src="{{image}}" alt="Image" data-snap-ignore="true">
+    <!-- {{#ionItem path="image.show" class="item-image" buttonRight=false avatar=false}} -->
+    {{#ionItem class="item-image"}}
+      <img class="img" src="{{image}}" alt="image">
     {{/ionItem}}
   {{/each}}
+  {{> cameraButton}}
 {{/ionContent}}
 
 </template>

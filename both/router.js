@@ -3,6 +3,7 @@ Router.configure({
   loadingTemplate: 'loading'
 });
 
+
 Router.route('/', function() {
   this.layout('layout');
   this.render('main');
@@ -17,7 +18,7 @@ Router.route('/', function() {
 Router.route('/images/:_id', function() {
   var params = this.params;
   var id = params._id;
-  console.log(id);
+  console.log("showing image: ", id);
   this.render('images', {
     data: function() {
       return Pictures.findOne({
