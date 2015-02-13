@@ -1,7 +1,6 @@
-// Meteor.startup(function () {
-//   if (Meteor.isCordova) {
-//     StatusBar.hide();}
-// });
+Meteor.startup(function() {
+  Geolocation.currentLocation();
+});
 
 Meteor.startup(function () {
   Session.set('userId', Meteor.userId());

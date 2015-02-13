@@ -3,16 +3,21 @@ Router.configure({
   loadingTemplate: 'loading'
 });
 
-
 Router.route('/', function() {
   this.layout('layout');
   this.render('main');
-  fastRender: true;
-  }, {
-    waitOn: function () {
-      return Meteor.subscribe('Pictures');
-      }
-      });
+});
+
+
+// Router.route('/', function() {
+//   this.layout('layout');
+//   this.render('main');
+//   fastRender: true;
+//   }, {
+//     waitOn: function () {
+//       return Meteor.subscribe('Pictures');
+//       }
+//       });
 
 
 Router.route('/images/:_id', function() {

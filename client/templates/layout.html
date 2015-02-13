@@ -1,42 +1,53 @@
 <template name="layout">
-
   {{#ionBody}}
-
     {{#ionSideMenuContainer side="left"}}
+
       {{#ionSideMenu}}
+        {{>sideBar}}
+      {{/ionSideMenu}}
 
-          <div class="bar bar-header bar-stable">
-            <h1 class="title">{{> ionIcon icon="ios-gear-outline"}} PhotoStreams</h1>
-          </div>
-
-          <div class="content has-header">
-            <div class="list">
-
-              <div class="item item-icon-right" data-ion-menu-close>
-                {{> atNavButton}} {{> ionIcon icon="ios-arrow-right"}}
-              </div>
-
-              <li class="item item-checkbox">
-                <label class="checkbox">
-                  <input type="checkbox">
-                </label>
-                Camera Roll
-              </li>
-
-            </div>
-          </div>
-        {{/ionSideMenu}}
       {{#ionSideMenuContent}}
 
         {{> ionNavBar class="bar-dark"}}
-
-        {{#ionNavView}}
-          {{> yield}}
-        {{/ionNavView}}
-
+          {{#ionNavView}}
+            {{> yield}}
+          {{/ionNavView}}
       {{/ionSideMenuContent}}
 
     {{/ionSideMenuContainer}}
-
   {{/ionBody}}
 </template>
+
+<template name="sideBar">
+  <div class="bar bar-header bar-stable">
+    <h1 class="title">{{> ionIcon icon="ios-gear-outline"}} PhotoStreams</h1>
+  </div>
+
+  <div class="content has-header">
+
+    <div class="list">
+
+      <div class="item" data-ion-menu-close>
+        {{> atNavButton}} {{> ionIcon icon="ios-arrow-right"}}
+      </div>
+
+      <div class="item">
+        <button class="button button-clear">button-light</button>
+      </div>
+
+      <div class="item item-divider item-icon-left">
+        {{> ionIcon icon="ios-gear-outline"}} Settings
+      </div>
+
+      <div class="item item-checkbox">
+          <label class="checkbox">
+            <input type="checkbox">
+          </label>
+        Camera Roll
+      </div>
+
+
+
+    </div>
+  </div>
+  </template>

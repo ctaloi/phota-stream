@@ -3,66 +3,65 @@
 
   {{#if currentUser}}
 
-    {{#contentFor "headerButtonLeft"}}
-      <button class="button button-clear pull-left" data-ion-menu-toggle="left">
-        {{#if isAndroid}}
-          {{> ionIcon icon='android-more-vertical'}}
-        {{else}}
-          {{> ionIcon icon='navicon'}}
-        {{/if}}
-      </button>
-    {{/contentFor}}
-
-    {{#contentFor "headerButtonRight"}}
-      {{> libraryButton}}
-    {{/contentFor}}
-
-    {{#contentFor "headerTitle"}}
-      <h1 class="title">{{name}}'s Stream</h1>
-    {{/contentFor}}
-
-    {{#ionView}}
-        {{> gallery}}
-    {{/ionView}}
-
-    <div class="bar bar-footer bar-dark">
-      <div class="title">{{> cameraButton}}</div>
-    </div>
-
+    {{>userMain}}
 
   {{else}}
 
-    {{#contentFor "headerTitle"}}
-    <h1 class="title">PictureStream</h1>
-    {{/contentFor}}
-
-    {{#contentFor "headerButtonLeft"}}
-
-    {{/contentFor}}
-
-    {{#contentFor "headerButtonRight"}}
-
-    {{/contentFor}}
-
-    {{#ionView}}
-    {{#ionContent}}
-
-    <div class="card">
-      <div class="item item-text-wrap">
-          <h2>Login to get started !</h2>
-      </div>
-    </div>
-
-    <div class="card">
-    <div class="padding">
-        <button class="button button-positive button-block" data-ion-modal="signIn">Login or SignUp</button>
-    </div>
-    </div>
-
-
-    {{/ionContent}}
-    {{/ionView}}
+    {{> guestMain}}
 
   {{/if}}
 
+</template>
+
+<template name="userMain">
+  {{#contentFor "headerButtonLeft"}}
+    <button class="button button-clear pull-left" data-ion-menu-toggle="left">
+        {{> ionIcon icon='android-more-vertical'}}
+    </button>
+  {{/contentFor}}
+
+  {{#contentFor "headerButtonRight"}}
+    {{> libraryButton}}
+  {{/contentFor}}
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">{{name}}'s Stream</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+      {{> gallery}}
+  {{/ionView}}
+
+  <div class="bar bar-footer bar-dark">
+    <div class="title">{{> cameraButton}}</div>
+  </div>
+</template>
+
+
+
+
+<template name="guestMain">
+
+{{#contentFor "headerTitle"}}<h1 class="title">PictureStream</h1>{{/contentFor}}
+
+{{#contentFor "headerButtonLeft"}} {{/contentFor}}
+
+{{#contentFor "headerButtonRight"}} {{/contentFor}}
+
+{{#ionView}}
+{{#ionContent}}
+
+<div class="card">
+  <div class="item item-text-wrap">
+      <h2>Login to get started !</h2>
+  </div>
+</div>
+
+<div class="card">
+<div class="padding">
+    <button class="button button-positive button-block" data-ion-modal="signIn">Login or SignUp</button>
+</div>
+</div>
+{{/ionContent}}
+{{/ionView}}
 </template>
