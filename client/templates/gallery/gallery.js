@@ -23,6 +23,10 @@ Template.gallery.helpers({
   }
 });
 
+Template.gallery.rendered = function(){
+  $(".dropdown-button").dropdown();
+};
+
 Template.pictures.rendered = function(){
   $('.materialboxed').materialbox();
 };
