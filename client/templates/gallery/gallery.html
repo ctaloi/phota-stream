@@ -2,7 +2,7 @@
 <template name="gallery">
   <div class="row">
     {{#each getPictures}}
-      <div class="col l3 m6 s12">
+      <div class="col l3 m6 s6">
         {{>pictures}}
       </div>
     {{/each}}
@@ -10,5 +10,5 @@
 </template>
 
 <template name="pictures">
-  <img class="z-depth-4 materialboxed responsive-img" data-caption="{{formatTime createdAt}}" src="{{image}}">
+  <img class="z-depth-4 responsive-img" data-caption="{{formatTime createdAt}}" src="{{image}}">
 </template>

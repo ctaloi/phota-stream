@@ -23,8 +23,15 @@ Template.gallery.helpers({
   }
 });
 
+Template.gallery.events({
+  "click img": function(){    
+    window.FullScreenImage.showImageBase64(this.image, this.createdAt);
+  }
+});
+
 Template.gallery.rendered = function(){
-  $(".dropdown-button").dropdown();
+  // $(".dropdown-button").dropdown();
+  console.log(this);
 };
 
 Template.pictures.rendered = function(){
