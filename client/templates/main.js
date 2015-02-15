@@ -1,4 +1,4 @@
-Template.userMain.helpers({
+Template.nav.helpers({
   email: function () {
     if (Meteor.user())
       return Meteor.user().emails[0].address;

@@ -1,13 +1,14 @@
+
 <template name="gallery">
+  <div class="row">
+    {{#each getPictures}}
+      <div class="col l3 m6 s12">
+        {{>pictures}}
+      </div>
+    {{/each}}
+  </div>
+</template>
 
-{{#ionContent}}
-  {{#each getPictures}}
-    <!-- {{#ionItem path="image.show" class="item-image" buttonRight=false avatar=false}} -->
-    {{#ionItem class="item-image"}}
-      <img class="img" src="{{image}}" alt="image">
-    {{/ionItem}}
-  {{/each}}
-  {{> cameraButton}}
-{{/ionContent}}
-
+<template name="pictures">
+  <img class="materialboxed responsive-img" data-caption="{{formatTime createdAt}}" src="{{image}}">
 </template>

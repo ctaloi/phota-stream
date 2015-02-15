@@ -2,11 +2,9 @@
 var submitCloseModal = function(error, state){
   if (!error) {
     if (state === "signIn") {
-      IonModal.close();
       Router.go('/');
     }
-    if (state === "signUp") {
-      IonModal.close();
+    if (state === "signUp") {      
       Router.go('/');
     }
   }

@@ -17,7 +17,7 @@ var getPicture = function(opts) {
 };
 
 Template.cameraButton.events({
-  'click button': function() {
+  'click a': function() {
     getPicture({
       quality: 90,
       width: 1024,
@@ -28,7 +28,7 @@ Template.cameraButton.events({
 });
 
 Template.libraryButton.events({
-  'click button': function () {
+  'click a': function () {
     if (Meteor.isCordova) {
       getPicture({
         quality: 90,

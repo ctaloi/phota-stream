@@ -8,18 +8,6 @@ Router.route('/', function() {
   this.render('main');
 });
 
-
-// Router.route('/', function() {
-//   this.layout('layout');
-//   this.render('main');
-//   fastRender: true;
-//   }, {
-//     waitOn: function () {
-//       return Meteor.subscribe('Pictures');
-//       }
-//       });
-
-
 Router.route('/images/:_id', function() {
   var params = this.params;
   var id = params._id;

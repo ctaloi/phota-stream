@@ -1,67 +1,20 @@
 
 <template name="main">
-
   {{#if currentUser}}
-
     {{>userMain}}
-
   {{else}}
-
     {{> guestMain}}
-
   {{/if}}
 
 </template>
 
 <template name="userMain">
-  {{#contentFor "headerButtonLeft"}}
-    <button class="button button-clear pull-left" data-ion-menu-toggle="left">
-        {{> ionIcon icon='android-more-vertical'}}
-    </button>
-  {{/contentFor}}
-
-  {{#contentFor "headerButtonRight"}}
-    {{> libraryButton}}
-  {{/contentFor}}
-
-  {{#contentFor "headerTitle"}}
-    <h1 class="title">{{name}}'s Stream</h1>
-  {{/contentFor}}
-
-  {{#ionView}}
-      {{> gallery}}
-  {{/ionView}}
-
-  <div class="bar bar-footer bar-dark">
-    <div class="title">{{> cameraButton}}</div>
-  </div>
+  {{> gallery}}
+  {{> cameraButton}}
 </template>
 
-
-
-
 <template name="guestMain">
-
-{{#contentFor "headerTitle"}}<h1 class="title">PictureStream</h1>{{/contentFor}}
-
-{{#contentFor "headerButtonLeft"}} {{/contentFor}}
-
-{{#contentFor "headerButtonRight"}} {{/contentFor}}
-
-{{#ionView}}
-{{#ionContent}}
-
-<div class="card">
-  <div class="item item-text-wrap">
-      <h2>Login to get started !</h2>
+  <div class="container">
+    {{> atForm}}
   </div>
-</div>
-
-<div class="card">
-<div class="padding">
-    <button class="button button-positive button-block" data-ion-modal="signIn">Login or SignUp</button>
-</div>
-</div>
-{{/ionContent}}
-{{/ionView}}
 </template>

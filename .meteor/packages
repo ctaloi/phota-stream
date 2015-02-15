@@ -8,11 +8,6 @@ meteor-platform
 mdg:geolocation
 iron:router
 jquery
-meteoric:autoform-ionic
-meteoric:ionic
-meteoric:ionic-sass
-meteoric:ionicons-sass
-useraccounts:ionic
 accounts-password
 email
 fastclick
@@ -22,4 +17,5 @@ launch-screen
 houston:admin
 momentjs:moment
 mdg:camera
-chrismbeckett:toastr
+materialize:materialize
+useraccounts:materialize
